@@ -8,7 +8,28 @@ declare(strict_types=1);
 
 namespace App\DependencyInjection;
 
-class Configuration
-{
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\SiteAccessAware\Configuration as SiteAccessConfiguration;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
+class Configuration extends SiteAccessConfiguration
+{
+    public function getConfigTreeBuilder(): TreeBuilder
+    {
+        $treeBuilder = new TreeBuilder('app');
+        $rootNode = $treeBuilder->getRootNode();
+
+        // $systemNode is the root of SiteAccess-aware settings.
+        $systemNode = $this->generateScopeBaseNode($rootNode);
+        $systemNode
+            ->scalarNode('name')->isRequired()->end()
+                ->arrayNode('custom_setting')
+                    ->children()
+                        ->scalarNode('string')->end()
+                        ->integerNode('number')->end()
+                        ->booleanNode('enabled')->end()
+                    ->end()
+            ->end();
+
+        return $treeBuilder;
+    }
 }

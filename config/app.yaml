@@ -1,0 +1,7 @@
+app:
+    system:
+        site:
+            name: name_1
+            custom_setting:
+                number: 456
+                enabled: true

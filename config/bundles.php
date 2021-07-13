@@ -52,4 +52,5 @@ return [
     EzSystems\EzPlatformQueryFieldType\Symfony\EzSystemsEzPlatformQueryFieldTypeBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Search\IbexaPlatformSearchBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Assets\IbexaPlatformAssetsBundle::class => ['all' => true],
+    Acme\ExampleBundle\AcmeExampleBundle::class => ['all' => true],
 ];

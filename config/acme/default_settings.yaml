@@ -1,0 +1,6 @@
+parameters:
+    acme_example.default.name: name_1
+    acme_example.default.custom_setting:
+        string: ~
+        number: 0
+        enabled: false

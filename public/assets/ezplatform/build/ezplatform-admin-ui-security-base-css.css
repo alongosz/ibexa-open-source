@@ -10726,12 +10726,27 @@ select.form-control:disabled, select.form-control[disabled] {
 
 .ez-btn--primary:hover {
   color: #fff;
-  background-color: #e75476;
+  background-color: #8b0e50;
 }
 
 .ez-btn--primary:active {
-  background-color: #e75476;
-  box-shadow: inset 0 0 0 0.125rem #ae1164;
+  background-color: #8b0e50;
+}
+
+.ez-btn--primary:focus {
+  background-color: #8b0e50;
+  box-shadow: 0 0 0 0.25rem rgba(174, 17, 100, 0.5);
+}
+
+.ez-btn--primary.btn:disabled, .ez-btn--primary.btn.disabled {
+  opacity: 1;
+}
+
+.ez-btn--primary:disabled, .ez-btn--primary.disabled {
+  background-color: #e0e0e8;
+  color: #878b90;
+  fill: #878b90;
+  box-shadow: none;
 }
 
 .ez-btn--base-dark {
@@ -10746,8 +10761,26 @@ select.form-control:disabled, select.form-control[disabled] {
 }
 
 .ez-btn--base-dark:active {
+  color: #fff;
+  fill: #fff;
   background-color: #878b90;
   box-shadow: inset 0 0 0 0.125rem #878b90;
+}
+
+.ez-btn--base-dark:active .ez-icon {
+  fill: inherit;
+}
+
+.ez-btn--base-dark:focus {
+  box-shadow: inset 0 0 0 0.0625rem #878b90;
+}
+
+.ez-btn--base-dark:disabled, .ez-btn--base-dark.disabled {
+  opacity: 0.3;
+  color: #878b90;
+  background-color: transparent;
+  fill: #878b90;
+  box-shadow: inset 0 0 0 0.0625rem #878b90;
 }
 
 .ez-btn--base-dark .ez-icon {
@@ -10828,6 +10861,7 @@ select.form-control:disabled, select.form-control[disabled] {
 .ez-context-menu .ez-sticky-container > .btn[disabled] {
   opacity: 1;
   color: rgba(255, 255, 255, 0.5);
+  background-color: #ae1164;
 }
 
 .ez-context-menu .ez-sticky-container > .btn.disabled .ez-icon,
@@ -10838,6 +10872,22 @@ select.form-control:disabled, select.form-control[disabled] {
 .btn.disabled,
 .btn[disabled] {
   opacity: 0.3;
+}
+
+.btn.btn-primary.disabled,
+.btn.btn-primary[disabled] {
+  opacity: 1;
+  background-color: #e0e0e8;
+  color: #878b90;
+  fill: #878b90;
+}
+
+.btn.btn-secondary.disabled,
+.btn.btn-secondary[disabled] {
+  opacity: 1;
+  background-color: rgba(101, 101, 101, 0.3);
+  color: #878b90;
+  fill: #878b90;
 }
 
 .ez-btn--select-subtree {
